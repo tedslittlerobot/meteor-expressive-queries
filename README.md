@@ -6,7 +6,6 @@ Expressive query scopes for meteor's mongo library
 
 ## Installation
 
-Hopefully, soon, you will be able to run the following to install (i'm just testing a couple more things first):
 ```meteor add tlr:expressive-queries```
 
 ## Preamble
