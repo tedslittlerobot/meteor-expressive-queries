@@ -2,6 +2,8 @@
 
 Expressive query scopes for meteor's mongo library
 
+[![Build Status](https://travis-ci.org/tedslittlerobot/meteor-expressive-queries.svg?branch=master)](https://travis-ci.org/tedslittlerobot/meteor-expressive-queries)
+
 ## Installation
 
 ```meteor add tlr:expressive-queries```
