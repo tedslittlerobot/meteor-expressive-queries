@@ -1,6 +1,6 @@
 Package.describe({
   name: 'tlr:expressive-queries',
-  version: '1.0.3',
+  version: '1.0.4',
   // Brief, one-line summary of the package.
   summary: "Expressive queries for Meteor Collections",
   // URL to the Git repository containing the source code for this package.

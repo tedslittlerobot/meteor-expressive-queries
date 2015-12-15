@@ -194,7 +194,7 @@ class Query {
    * @return Query
    */
   static latest(scope, field) {
-    scope.sort(Query.obj(field, 1));
+    scope.sort(Query.obj(field, -1));
 
     return Query;
   }
@@ -208,7 +208,7 @@ class Query {
    * @return Query
    */
   static oldest(scope, field) {
-    scope.sort(Query.obj(field, -1));
+    scope.sort(Query.obj(field, 1));
 
     return Query;
   }
