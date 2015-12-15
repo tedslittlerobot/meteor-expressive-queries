@@ -130,7 +130,7 @@ class Query {
    * @return Object
    */
   get options() {
-    var options = _.reduce(['sort', 'fields'], (memo, key) =>
+    let options = _.reduce(['sort', 'fields'], (memo, key) =>
       _.isEmpty(this['_'+key]) ? memo : Query.obj(key, this['_'+key], memo),
     {});
 
@@ -194,7 +194,7 @@ class Query {
    * @return Query
    */
   static latest(scope, field) {
-    scope.sort = Query.obj(field, 1);
+    scope.sort(Query.obj(field, 1));
 
     return Query;
   }
@@ -208,7 +208,7 @@ class Query {
    * @return Query
    */
   static oldest(scope, field) {
-    scope.sort = Query.obj(field, -1);
+    scope.sort(Query.obj(field, -1));
 
     return Query;
   }
@@ -231,14 +231,14 @@ class Query {
     collection.EQ = function() {
       // this is a trick to forward the function arguments to the constructor of
       // a dynamic type
-      var args = arguments;
+      const args = arguments;
 
       function F() {
         return SubScope.apply(this, args);
       }
 
       F.prototype = SubScope.prototype;
-      var query = new F();
+      const query = new F();
 
       // Finally, assign the collection property
       query._collection = collection;
